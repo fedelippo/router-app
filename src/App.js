@@ -16,7 +16,14 @@ class App extends Component {
         <NavBar />
         <div className="content">
           <Switch>
+            {/* Route is a wrapper around component and automatiaclly
+            injects the history, location and match properties from the props */}
             <Route path="/products/:id" component={ProductDetails} />
+            {/**
+             * "render" help to pass parameters to a component inside a Route
+             * however we need to inject props because it doesn't do that
+             * automatically.
+             */}
             <Route
               path="/products"
               render={(props) => <Products sortBy="newest" {...props} />}
