@@ -7,6 +7,7 @@ const Posts = ({ match, location }) => {
    */
   const result = queryString.parse(location.search);
   console.log(result);
+
   return (
     <div>
       <h1>Posts</h1>
